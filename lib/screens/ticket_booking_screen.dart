@@ -62,8 +62,7 @@ class _TicketBookingScreenState extends State<TicketBookingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: const Text('Ticket Booking'),
           backgroundColor: Colors.blueGrey,
@@ -195,7 +194,7 @@ class _TicketBookingScreenState extends State<TicketBookingScreen> {
             ),
           ),
         ),
-      ),
-    );
+      );
+
   }
 }
