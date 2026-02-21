@@ -1,27 +1,50 @@
 import 'package:flutter/material.dart';
-import 'package:local_event_finder_app/provider/event_list_provider.dart';
-import 'package:local_event_finder_app/screens/event_list_screen.dart';
-import 'package:local_event_finder_app/services/event_service.dart';
-import 'package:provider/provider.dart';
+import 'home_screen.dart';
 
 void main() {
-  runApp(const LocalEventFinder());
+  runApp(const MyApp());
 }
 
-class LocalEventFinder extends StatelessWidget {
-  const LocalEventFinder({super.key});
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  ThemeMode _themeMode = ThemeMode.light;
+
+  void toggleTheme() {
+    setState(() {
+      _themeMode =
+      _themeMode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-   return MultiProvider(
-     providers: [
-       ChangeNotifierProvider(create: (_)=> EventListProvider(EventService()))
-     ],
-     child: MaterialApp(
-       home: EventListScreen(),
-     ),
-   );
-  }
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
 
+      // Light Theme
+      theme: ThemeData(
+        brightness: Brightness.light,
+        primarySwatch: Colors.blue,
+      ),
+
+      // Dark Theme
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+        primarySwatch: Colors.blue,
+      ),
+
+      themeMode: _themeMode,
+
+      home: HomeScreen(
+        onToggleTheme: toggleTheme,
+        themeMode: _themeMode,
+      ),
+    );
+  }
 }
