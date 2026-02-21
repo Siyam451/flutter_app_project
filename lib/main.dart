@@ -1,27 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:local_event_finder_app/provider/event_list_provider.dart';
-import 'package:local_event_finder_app/screens/event_list_screen.dart';
-import 'package:local_event_finder_app/services/event_service.dart';
-import 'package:provider/provider.dart';
+import 'presentation/pages/home_screen.dart';
 
 void main() {
-  runApp(const LocalEventFinder());
+  runApp(const MyApp());
 }
 
-class LocalEventFinder extends StatelessWidget {
-  const LocalEventFinder({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-   return MultiProvider(
-     providers: [
-       ChangeNotifierProvider(create: (_)=> EventListProvider(EventService()))
-     ],
-     child: MaterialApp(
-       home: EventListScreen(),
-     ),
-   );
+    return MaterialApp(
+      home: HomeScreen(),
+      debugShowCheckedModeBanner: false,
+    );
   }
-
 }
