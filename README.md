@@ -1,16 +1,20 @@
 # local_event_finder_app
 
-A new Flutter project.
+## 🚀 Key Features
 
-## Getting Started
+- 🔍 Search and discover nearby events easily
+- 📍 Location-based event suggestions
+- 📍 Show location of the each event in a map
+- 📅 View detailed event information
+- 📱 Responsive UI for mobile and tablet devices
 
-This project is a starting point for a Flutter application.
+  ## 🛠️ Tech Stack
 
-A few resources to get you started if this is your first Flutter project:
+- Flutter
+- Dart
+- REST API
+- Provider (State Management)
+- Geo Location
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+  ##
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
