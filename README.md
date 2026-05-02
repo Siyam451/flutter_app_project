@@ -43,25 +43,6 @@ It provides a smooth experience for browsing, searching, and viewing event detai
 
 ---
 
-## 🏗️ Architecture
-
-```id="wkj5hp"
-lib/
-│
-├── data/
-│   ├── models/
-│   ├── services/
-│
-├── presentation/
-│   ├── screens/
-│   ├── widgets/
-│   ├── providers/
-│
-└── main.dart
-```
-
----
-
 ## 🛠️ Tech Stack
 
 | Technology             | Usage                |
@@ -79,6 +60,3 @@ lib/
 
 If you like this project, give it a ⭐ and share it 🚀
 
-<p align="center">
-  Made with ❤️ using Flutter
-</p>
